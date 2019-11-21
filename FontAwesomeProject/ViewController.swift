@@ -7,12 +7,34 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label1: UILabel!
+    
+    @IBOutlet weak var label2: UILabel!
+    
+    @IBOutlet weak var label3: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // label1で使うフォントをFontAwesomeに設定
+        label1.font = UIFont.fontAwesome(ofSize: 100, style: .brands)
+        label1.text = String.fontAwesomeIcon(name: .github)
+        label1.textColor = .systemPink
+        
+        // label2で使うフォントをFontAwesomeに設定
+        label2.font = UIFont.fontAwesome(ofSize: 100, style: .regular)
+        label2.text = String.fontAwesomeIcon(name: .moon)
+        label2.textColor = .yellow
+        
+        // label3で使うフォントをFontAwesomeに設定
+        label3.font = UIFont.fontAwesome(ofSize: 100, style: .regular)
+        label3.text = String.fontAwesomeIcon(name: .sun)
+        label3.textColor = .orange
+        
     }
 
 

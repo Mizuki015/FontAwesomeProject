@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BD80A18ACCA120A3BEA73A9 /* Pods_FontAwesomeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A37E46F6259EB0CC3A3032E /* Pods_FontAwesomeProject.framework */; };
 		7BC9552D2386530000EE0A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9552C2386530000EE0A78 /* AppDelegate.swift */; };
 		7BC9552F2386530000EE0A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9552E2386530000EE0A78 /* SceneDelegate.swift */; };
 		7BC955312386530000EE0A78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC955302386530000EE0A78 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30B2114517E421F15D81C62B /* Pods-FontAwesomeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontAwesomeProject.release.xcconfig"; path = "Target Support Files/Pods-FontAwesomeProject/Pods-FontAwesomeProject.release.xcconfig"; sourceTree = "<group>"; };
+		44116F5F4A3E4EE2C39C3E78 /* Pods-FontAwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontAwesomeProject.debug.xcconfig"; path = "Target Support Files/Pods-FontAwesomeProject/Pods-FontAwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		6A37E46F6259EB0CC3A3032E /* Pods_FontAwesomeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FontAwesomeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC955292386530000EE0A78 /* FontAwesomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontAwesomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC9552C2386530000EE0A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BC9552E2386530000EE0A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD80A18ACCA120A3BEA73A9 /* Pods_FontAwesomeProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				7BC9552B2386530000EE0A78 /* FontAwesomeProject */,
 				7BC9552A2386530000EE0A78 /* Products */,
+				BEA55C937A7BA345C502BF0A /* Pods */,
+				BEE48F399158CB66822F7D07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = FontAwesomeProject;
 			sourceTree = "<group>";
 		};
+		BEA55C937A7BA345C502BF0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44116F5F4A3E4EE2C39C3E78 /* Pods-FontAwesomeProject.debug.xcconfig */,
+				30B2114517E421F15D81C62B /* Pods-FontAwesomeProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BEE48F399158CB66822F7D07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A37E46F6259EB0CC3A3032E /* Pods_FontAwesomeProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC9553D2386530200EE0A78 /* Build configuration list for PBXNativeTarget "FontAwesomeProject" */;
 			buildPhases = (
+				2EFAF13E3AE8AFD6D39C29BC /* [CP] Check Pods Manifest.lock */,
 				7BC955252386530000EE0A78 /* Sources */,
 				7BC955262386530000EE0A78 /* Frameworks */,
 				7BC955272386530000EE0A78 /* Resources */,
+				7EDE0A891FC2871C4ACFD60C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EFAF13E3AE8AFD6D39C29BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FontAwesomeProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EDE0A891FC2871C4ACFD60C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FontAwesomeProject/Pods-FontAwesomeProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FontAwesomeProject/Pods-FontAwesomeProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FontAwesomeProject/Pods-FontAwesomeProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BC955252386530000EE0A78 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		7BC9553E2386530200EE0A78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44116F5F4A3E4EE2C39C3E78 /* Pods-FontAwesomeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		7BC9553F2386530200EE0A78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30B2114517E421F15D81C62B /* Pods-FontAwesomeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
